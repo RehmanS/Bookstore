@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: gateway-service          #NOTE: eureka-ya bu adla register olacaq
+  cloud:
+    gateway:
+      routes:
+        - id: book-service         #NOTE: bu servis gateway-e qosulacaq
+          uri: lb://book-service
+          predicates:
+            - Path=/book/**        #NOTE: gateway vasitesile hansi url-lere cata bilerik
+        - id: library-service
+          uri: lb://library-service #NOTE: lb Load Balancing-i temin elemek ucun yazilir.
+          predicates:               #NOTE: lb yazmasaq sadece bir service baglanacaq.
+            - Path=/library/**
+      discovery:
+        locator:
+          enabled: true
+
+server:
+  port: 8888
+
+#NOTE: Eurekaya baglayiriq(eurekanin url-ini veririk?)
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
