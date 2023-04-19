@@ -18,15 +18,15 @@ public class LibraryServiceApplication {
 
 	/* NOTE: Spring bizim yaratdigimiz RetrieveMessageErrorDecoder-i istifade etsin deye bu bean olmaldır.
 	    Üsul : Feign client error handling */
-	@Bean
-	public ErrorDecoder errorDecoder(){
-		return new RetrieveMessageErrorDecoder();
-	}
-
-	@Bean
-	Logger.Level feignLoggerLevel(){
-		return Logger.Level.FULL;
-	}
+//	@Bean
+//	public ErrorDecoder errorDecoder(){
+//		return new RetrieveMessageErrorDecoder();
+//	}
+//
+//	@Bean
+//	Logger.Level feignLoggerLevel(){
+//		return Logger.Level.FULL;
+//	}
 
 	/* NOTE: Başqa bir üsulda fault tolerance üsuldur. Bu zaman exception qayıtsa belə process dayanmır
 	    və başqa bir process həyata keçir. Client içindəki metodlara CircuitBreaker annotasiyası yazılır

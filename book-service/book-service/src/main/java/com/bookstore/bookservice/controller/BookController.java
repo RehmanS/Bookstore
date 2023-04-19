@@ -5,6 +5,8 @@ import com.bookstore.bookservice.dto.BookIdDto;
 import com.bookstore.bookservice.service.BookService;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +21,7 @@ import java.util.List;
 public class BookController {
 
     private final BookService bookService;
+    Logger logger = LoggerFactory.getLogger(BookController.class);
 
     @GetMapping
     public List<BookDto> getAllBooks(){
@@ -27,6 +30,7 @@ public class BookController {
 
     @GetMapping("{book-id}")
     public BookDto getBookById(@PathVariable("book-id") Long id ){
+        logger.info("getBookById "+id);
         return bookService.getBookByID(id);
     }
 
