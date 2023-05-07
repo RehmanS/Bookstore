@@ -1,17 +1,15 @@
 package com.bookstore.bookservice.controller;
 
+import com.bookstore.bookservice.dto.BookCreateRequest;
 import com.bookstore.bookservice.dto.BookDto;
 import com.bookstore.bookservice.dto.BookIdDto;
+import com.bookstore.bookservice.dto.BookResponse;
 import com.bookstore.bookservice.service.BookService;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,24 +17,37 @@ import java.util.List;
 @RequestMapping("/book")
 @RequiredArgsConstructor
 public class BookController {
-
     private final BookService bookService;
-    Logger logger = LoggerFactory.getLogger(BookController.class);
-
-    @GetMapping
-    public List<BookDto> getAllBooks(){
-       return bookService.getAllBooks();
+    @PostMapping
+    public ResponseEntity<String> createBook(@Valid @RequestBody BookCreateRequest bookCreateRequest) {
+        bookService.createBook(bookCreateRequest);
+        return ResponseEntity.ok("Book successfully created");
     }
 
-    @GetMapping("{book-id}")
-    public BookDto getBookById(@PathVariable("book-id") Long id ){
-        logger.info("getBookById "+id);
+    @GetMapping
+    public List<BookDto> getAllBooks() {
+        return bookService.getAllBooks();
+    }
+
+    @GetMapping("/{book-id}")
+    public BookDto getBookById(@PathVariable("book-id") Long id) {
         return bookService.getBookByID(id);
     }
 
     @GetMapping("/isbn/{isbn}")
     public ResponseEntity<BookIdDto> getBookByIsbn(@PathVariable @NotEmpty String isbn) {
         return ResponseEntity.ok(bookService.getBookByIsbn(isbn));
+    }
+
+    @DeleteMapping({"/{isbn}"})
+    public ResponseEntity<String> deleteBookByIsbn(@PathVariable("isbn") String isbn) {
+        bookService.deleteBookByIsbn(isbn);
+        return ResponseEntity.ok("Book successfully deleted by isbn: " + isbn);
+    }
+
+    @PutMapping
+    public BookResponse updateBookByIsbn(@Valid @RequestBody BookCreateRequest bookCreateRequest) {
+        return bookService.updateBookByIsbn(bookCreateRequest);
     }
 
 }

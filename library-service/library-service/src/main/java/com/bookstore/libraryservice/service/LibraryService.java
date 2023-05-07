@@ -1,15 +1,20 @@
 package com.bookstore.libraryservice.service;
 
 import com.bookstore.libraryservice.dto.AddBookRequest;
+import com.bookstore.libraryservice.dto.CreateLibraryRequest;
 import com.bookstore.libraryservice.dto.LibraryDto;
-import com.bookstore.libraryservice.entity.Library;
 
 public interface LibraryService {
 
     LibraryDto getAllBooksInLibraryById(Long id);
 
-    LibraryDto createLibrary();
+    LibraryDto createLibrary(CreateLibraryRequest createLibraryRequest);
 
     void addBookToLibrary(AddBookRequest addBookRequest);
+
+    void deleteLibraryById(Long id);
+
+    void deleteBookFromLibrary(Long libId,Long bookId);
+
 
 }

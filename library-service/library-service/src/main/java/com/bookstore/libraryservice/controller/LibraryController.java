@@ -1,9 +1,12 @@
 package com.bookstore.libraryservice.controller;
 
 import com.bookstore.libraryservice.dto.AddBookRequest;
+import com.bookstore.libraryservice.dto.CreateLibraryRequest;
 import com.bookstore.libraryservice.dto.LibraryDto;
 import com.bookstore.libraryservice.service.LibraryService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,13 +20,25 @@ public class LibraryController {
     }
 
     @PostMapping
-    public LibraryDto createLibrary(){
-        return libraryService.createLibrary();
+    public LibraryDto createLibrary(@RequestBody CreateLibraryRequest createLibraryRequest){
+        return libraryService.createLibrary(createLibraryRequest);
     }
 
     @PostMapping("/addBook")
-    public void addBookToLibrary(@RequestBody AddBookRequest addBookRequest){
+    public ResponseEntity<String> addBookToLibrary(@Valid @RequestBody AddBookRequest addBookRequest){
         libraryService.addBookToLibrary(addBookRequest);
+        return ResponseEntity.ok("The book was successfully added to the library");
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteLibraryById(@PathVariable("id") Long id) {
+        libraryService.deleteLibraryById(id);
+        return ResponseEntity.ok("Library successfully deleted");
+    }
+
+    @DeleteMapping("/libraryId/{libId}/bookId/{bookId}")
+    public ResponseEntity<String> deleteBookFromLibrary(@PathVariable("libId") Long libId, @PathVariable("bookId")  Long bookId){
+        libraryService.deleteBookFromLibrary(libId,bookId);
+        return ResponseEntity.ok("The book has been successfully deleted from the library");
+    }
 }

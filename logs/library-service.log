@@ -1,0 +1,49 @@
+2023-05-07 16:41:39.667 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-05-07 16:41:39.705 [main] INFO  com.bookstore.libraryservice.LibraryServiceApplication - Starting LibraryServiceApplication using Java 19.0.2 with PID 444 (C:\Users\Rehman\Downloads\Bookstore\library-service\library-service\target\classes started by Rehman in C:\Users\Rehman\Downloads\Bookstore)
+2023-05-07 16:41:39.711 [main] INFO  com.bookstore.libraryservice.LibraryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-07 16:41:39.760 [main] INFO  org.springframework.vault.core.env.LeaseAwareVaultPropertySource - Vault location [secret/library-service] not resolvable: Not found
+2023-05-07 16:41:39.761 [main] INFO  org.springframework.vault.core.env.LeaseAwareVaultPropertySource - Vault location [secret/database] not resolvable: Not found
+2023-05-07 16:41:40.406 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-07 16:41:40.554 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 141 ms. Found 1 JPA repository interfaces.
+2023-05-07 16:41:40.907 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=b0644955-28c4-3e70-9741-20622e5a149f
+2023-05-07 16:41:40.983 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.bookstore.libraryservice.client.BookServiceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-07 16:41:41.526 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2023-05-07 16:41:41.534 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-05-07 16:41:41.535 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-07 16:41:41.535 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-07 16:41:41.629 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-07 16:41:41.631 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1864 ms
+2023-05-07 16:41:41.846 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-07 16:41:41.912 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-07 16:41:42.211 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-07 16:41:42.479 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a490518
+2023-05-07 16:41:42.480 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-07 16:41:42.541 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-07 16:41:43.361 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-07 16:41:43.373 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-07 16:41:43.803 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-07 16:41:43.943 [main] INFO  org.springframework.cloud.openfeign.FeignClientFactoryBean - For 'book-service' URL not provided. Will try picking an instance via load-balancing.
+2023-05-07 16:41:45.058 [main] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-05-07 16:41:45.220 [main] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-05-07 16:41:45.307 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2023-05-07 16:41:45.323 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 52282 (http) with context path ''
+2023-05-07 16:41:45.324 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 52282
+2023-05-07 16:41:45.328 [main] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-05-07 16:41:45.379 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-05-07 16:41:45.384 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-05-07 16:41:45.408 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2023-05-07 16:41:45.408 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2023-05-07 16:41:45.408 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2023-05-07 16:41:45.409 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2023-05-07 16:41:45.409 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2023-05-07 16:41:45.409 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2023-05-07 16:41:45.409 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2023-05-07 16:41:45.483 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2023-05-07 16:41:45.485 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2023-05-07 16:41:45.488 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-05-07 16:41:45.493 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1683463305492 with initial instances count: 2
+2023-05-07 16:41:45.505 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application LIBRARY-SERVICE with eureka with status UP
+2023-05-07 16:41:45.505 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1683463305505, current=UP, previous=STARTING]
+2023-05-07 16:41:45.507 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_LIBRARY-SERVICE/library-service:a770926119cb6ad54e175049ecc15b61: registering service...
+2023-05-07 16:41:45.551 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_LIBRARY-SERVICE/library-service:a770926119cb6ad54e175049ecc15b61 - registration status: 204
+2023-05-07 16:41:45.607 [main] INFO  com.bookstore.libraryservice.LibraryServiceApplication - Started LibraryServiceApplication in 6.945 seconds (process running for 8.259)

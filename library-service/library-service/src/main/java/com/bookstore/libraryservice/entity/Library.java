@@ -1,11 +1,8 @@
 package com.bookstore.libraryservice.entity;
 
-
-import com.bookstore.libraryservice.dto.BookDto;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,6 +12,8 @@ public class Library {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    String libraryName;
 
     @ElementCollection
     List<Long> userBooks;
