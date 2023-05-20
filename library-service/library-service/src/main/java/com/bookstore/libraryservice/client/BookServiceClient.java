@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "book-service", path = "/book")
 public interface BookServiceClient {
-    // NOTE : Isbn tapilmadigi halda default isbnli bir kitab yaradir
+    // NOTE : If there is no isbn, it creates a book with the default isbn
     @GetMapping("/isbn/{isbn}")
     @CircuitBreaker(name = "getBookByIsbnCircuitBreaker", fallbackMethod = "getBookFallback")
     ResponseEntity<BookIdDto> getBookByIsbn(@PathVariable("isbn") String isbn);
@@ -26,7 +26,7 @@ public interface BookServiceClient {
     BookDto getBookById(@PathVariable("book-id") Long id);
 
     default BookDto getBookByIdFallback(Long id, Exception exception) {
-        return new BookDto(0L, "default-book", 0);
+        return new BookDto(0L, "default-book", 0,"default","");
     }
 
 

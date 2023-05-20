@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 public class RetrieveMessageErrorDecoder implements ErrorDecoder {
-    /*  NOTE: Bu class  feing clientdan gələn exceptionu normal exceptiona çevirir
-         Stream proseslərini asanlaşdırmaq üçün common-io dependecy əlavə olunmalıdı  */
+    /*  NOTE: This class turns the exception from the feing client into a normal exception
+          A common-io dependency should have been added to facilitate stream processes  */
     private final ErrorDecoder errorDecoder = new Default();
 
     @Override
