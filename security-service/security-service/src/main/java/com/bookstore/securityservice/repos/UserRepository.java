@@ -1,6 +1,6 @@
-package com.example.jwttoken.repos;
+package com.bookstore.securityservice.repos;
 
-import com.example.jwttoken.entities.User;
+import com.bookstore.securityservice.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User,Long> {

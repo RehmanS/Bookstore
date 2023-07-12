@@ -1,6 +1,6 @@
-package com.example.jwttoken.repos;
+package com.bookstore.securityservice.repos;
 
-import com.example.jwttoken.entities.RefreshToken;
+import com.bookstore.securityservice.entities.RefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RefreshTokenRepository extends JpaRepository<RefreshToken,Long> {

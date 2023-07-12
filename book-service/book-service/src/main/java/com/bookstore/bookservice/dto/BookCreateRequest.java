@@ -1,9 +1,15 @@
 package com.bookstore.bookservice.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 
-public record BookCreateRequest(@NotBlank String name,
+
+@Builder
+public record BookCreateRequest(String image,
+                                @NotBlank String name,
                                 String author,
                                 int bookYear,
+                                String fiction,
+                                String detail,
                                 @NotBlank String isbn) {
 }

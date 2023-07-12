@@ -1,6 +1,7 @@
-package com.example.jwttoken.services;
+package com.bookstore.securityservice.services;
 
-import com.example.jwttoken.entities.User;
+
+import com.bookstore.securityservice.entities.User;
 
 import java.util.List;
 

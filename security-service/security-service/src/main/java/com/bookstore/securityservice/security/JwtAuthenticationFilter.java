@@ -1,6 +1,6 @@
-package com.example.jwttoken.security;
+package com.bookstore.securityservice.security;
 
-import com.example.jwttoken.serviceImpl.UserDetailServiceImpl;
+import com.bookstore.securityservice.serviceImpl.UserDetailServiceImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,7 +18,6 @@ import java.io.IOException;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     JwtTokenProvider jwtTokenProvider;
-
     @Autowired
     UserDetailServiceImpl userDetailsService;
 

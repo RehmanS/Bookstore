@@ -13,9 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class LibraryDto {
-
     Long id;
     String libraryName;
     List<BookDto> userBookList;
-
 }

@@ -1,25 +1,40 @@
 spring:
   application:
-    name: gateway-service          #NOTE: eureka-ya bu adla register olacaq
+    name: gateway-service          # Eureka-ya bu adla register olacaq
   cloud:
     gateway:
       routes:
-        - id: book-service         #NOTE: bu servis gateway-e qosulacaq
+        - id: book-service
           uri: lb://book-service
           predicates:
-            - Path=/book/**        #NOTE: gateway vasitesile hansi url-lere cata bilerik
+            - Path=/book/**,/readList/**
+          filters:
+            - AuthenticationFilter # Request service getmezden qabaq filtere dusecek
         - id: library-service
-          uri: lb://library-service #NOTE: lb Load Balancing-i temin elemek ucun yazilir.
-          predicates:               #NOTE: lb yazmasaq sadece bir service baglanacaq.
+          uri: lb://library-service # For load balanncing
+          predicates:
             - Path=/library/**
+          filters:
+            - AuthenticationFilter
+        - id: security-service
+          uri: lb://security-service
+          predicates:
+            - Path=/auth/**
       discovery:
         locator:
           enabled: true
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods: "*"
+            exposedHeaders: "*"
 
 server:
   port: 8888
 
-#NOTE: Eurekaya baglayiriq(eurekanin url-ini veririk?)
+# Eurekaya baglayiriq(eurekanin url-ini veririk?)
 eureka:
   client:
     register-with-eureka: true

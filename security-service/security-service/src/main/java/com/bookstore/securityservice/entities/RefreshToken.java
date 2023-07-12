@@ -1,4 +1,4 @@
-package com.example.jwttoken.entities;
+package com.bookstore.securityservice.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

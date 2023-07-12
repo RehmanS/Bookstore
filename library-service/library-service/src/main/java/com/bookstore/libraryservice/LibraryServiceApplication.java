@@ -1,12 +1,8 @@
 package com.bookstore.libraryservice;
 
-import com.bookstore.libraryservice.client.RetrieveMessageErrorDecoder;
-import feign.Logger;
-import feign.codec.ErrorDecoder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
@@ -18,8 +14,8 @@ public class LibraryServiceApplication {
 		SpringApplication.run(LibraryServiceApplication.class, args);
 	}
 
-	/* NOTE: Spring bizim yaratdigimiz RetrieveMessageErrorDecoder-i istifade etsin deye bu bean olmaldır.
-	    Üsul : Feign client error handling */
+	/* NOTE: This class is necessary so that Spring can use the Retrieve Message Error Decoder we created.
+	    Method : Feign client error handling */
 //	@Bean
 //	public ErrorDecoder errorDecoder(){
 //		return new RetrieveMessageErrorDecoder();
@@ -30,8 +26,9 @@ public class LibraryServiceApplication {
 //		return Logger.Level.FULL;
 //	}
 
-	/* NOTE: Başqa bir üsulda fault tolerance üsuldur. Bu zaman exception qayıtsa belə process dayanmır
-	    və başqa bir process həyata keçir. Client içindəki metodlara CircuitBreaker annotasiyası yazılır
-	     exceptiona dayanıqlılıq adlanır bu. */
+	/* NOTE: Another method is the fault tolerance method.
+	    At this time, even if an exception returns, the process does not stop and another process is executed.
+	    Methods inside the feign client are annotated with CircuitBreaker.
+	     This is called resilience. */
 
 }

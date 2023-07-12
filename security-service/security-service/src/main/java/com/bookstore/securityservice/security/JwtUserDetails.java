@@ -1,7 +1,6 @@
-package com.example.jwttoken.security;
+package com.bookstore.securityservice.security;
 
-import com.example.jwttoken.entities.User;
-import lombok.Data;
+import com.bookstore.securityservice.entities.User;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;

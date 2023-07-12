@@ -1,10 +1,4 @@
 package com.bookstore.libraryservice.exception;
-
-import com.bookstore.libraryservice.exception.BookNotFoundByIdException;
-import com.bookstore.libraryservice.exception.BookNotFoundException;
-import com.bookstore.libraryservice.exception.ExceptionMessage;
-import com.bookstore.libraryservice.exception.LibraryNotFoundException;
-import feign.FeignException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -16,7 +10,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 @RestControllerAdvice
 public class GeneralExceptionHandler {
 
-    //NOTE: Bu feign-den qayidan BookNotFoundExceptionu tutmaq ucundur
+    //NOTE: This is to catch the BookNotFoundException returned from feign
 //    @ExceptionHandler(BookNotFoundException.class)
 //    public ResponseEntity<ExceptionMessage> handle(BookNotFoundException exception) {
 //        return new ResponseEntity<>(exception.getExceptionMessage(), HttpStatus.resolve(exception.getExceptionMessage().status()));

@@ -35,7 +35,7 @@ public class BookController {
     }
 
     @GetMapping("/isbn/{isbn}")
-    public ResponseEntity<BookIdDto> getBookByIsbn(@PathVariable @NotEmpty String isbn) {
+    public ResponseEntity<BookDto> getBookByIsbn(@PathVariable @NotEmpty String isbn) {
         return ResponseEntity.ok(bookService.getBookByIsbn(isbn));
     }
 
@@ -50,4 +50,16 @@ public class BookController {
         return bookService.updateBookByIsbn(bookCreateRequest);
     }
 
+    @GetMapping("/name")
+    public List<BookResponse> findBooksByName(@RequestParam("text") String text){
+        return bookService.findBookByName(text);
+    }
+
+    @GetMapping("/author")
+    public List<BookResponse> findBooksByAuthor(@RequestParam("text") String text){
+        return bookService.findBookByAuthor(text);
+    }
+
+
 }
+

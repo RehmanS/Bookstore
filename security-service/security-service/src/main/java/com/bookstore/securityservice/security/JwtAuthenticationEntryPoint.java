@@ -1,4 +1,4 @@
-package com.example.jwttoken.security;
+package com.bookstore.securityservice.security;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.example.jwttoken.requests;
+package com.bookstore.securityservice.requests;
 
 import lombok.Data;
 

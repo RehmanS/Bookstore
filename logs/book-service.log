@@ -1,114 +1,245 @@
-2023-05-07 16:42:06.967 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
-2023-05-07 16:42:07.011 [main] INFO  com.bookstore.bookservice.BookServiceApplication - Starting BookServiceApplication using Java 19.0.2 with PID 5868 (C:\Users\Rehman\Downloads\Bookstore\book-service\book-service\target\classes started by Rehman in C:\Users\Rehman\Downloads\Bookstore)
-2023-05-07 16:42:07.016 [main] INFO  com.bookstore.bookservice.BookServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-05-07 16:42:07.798 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-07 16:42:07.931 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 126 ms. Found 1 JPA repository interfaces.
-2023-05-07 16:42:08.149 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=62a1f168-be7b-3a80-84bb-5f36d7ce6f56
-2023-05-07 16:42:08.669 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
-2023-05-07 16:42:08.678 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
-2023-05-07 16:42:08.679 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-07 16:42:08.679 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-05-07 16:42:08.784 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-07 16:42:08.786 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1724 ms
-2023-05-07 16:42:08.942 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-07 16:42:08.995 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-07 16:42:09.251 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2023-05-07 16:42:09.530 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35d4035f
-2023-05-07 16:42:09.532 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2023-05-07 16:42:09.587 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-05-07 16:42:10.396 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-07 16:42:10.404 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-07 16:42:10.823 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-07 16:42:11.444 [main] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
-2023-05-07 16:42:11.589 [main] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-05-07 16:42:11.656 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
-2023-05-07 16:42:11.673 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 52301 (http) with context path ''
-2023-05-07 16:42:11.674 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 52301
-2023-05-07 16:42:11.679 [main] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
-2023-05-07 16:42:11.714 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
-2023-05-07 16:42:11.718 [main] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
-2023-05-07 16:42:11.743 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
-2023-05-07 16:42:11.743 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
-2023-05-07 16:42:11.743 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
-2023-05-07 16:42:11.743 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
-2023-05-07 16:42:11.743 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
-2023-05-07 16:42:11.743 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
-2023-05-07 16:42:11.744 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
-2023-05-07 16:42:12.047 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
-2023-05-07 16:42:12.050 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-2023-05-07 16:42:12.053 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-05-07 16:42:12.057 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1683463332056 with initial instances count: 2
-2023-05-07 16:42:12.062 [main] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application BOOK-SERVICE with eureka with status UP
-2023-05-07 16:42:12.063 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1683463332063, current=UP, previous=STARTING]
-2023-05-07 16:42:12.065 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_BOOK-SERVICE/host.docker.internal:book-service:0: registering service...
-2023-05-07 16:42:12.106 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_BOOK-SERVICE/host.docker.internal:book-service:0 - registration status: 204
-2023-05-07 16:42:12.157 [main] INFO  com.bookstore.bookservice.BookServiceApplication - Started BookServiceApplication in 5.586 seconds (process running for 6.604)
-2023-05-07 16:43:02.015 [http-nio-auto-1-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-07 16:43:02.016 [http-nio-auto-1-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-05-07 16:43:02.018 [http-nio-auto-1-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2023-05-07 16:43:02.048 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.049 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.053 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.113 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)]
-2023-05-07 16:43:02.117 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.117 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.150 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.151 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.151 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.155 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)]
-2023-05-07 16:43:02.156 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.156 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.159 [http-nio-auto-1-exec-2] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.159 [http-nio-auto-1-exec-2] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.160 [http-nio-auto-1-exec-2] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.163 [http-nio-auto-1-exec-2] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)]
-2023-05-07 16:43:02.163 [http-nio-auto-1-exec-2] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.163 [http-nio-auto-1-exec-2] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.167 [http-nio-auto-1-exec-4] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.168 [http-nio-auto-1-exec-4] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.168 [http-nio-auto-1-exec-4] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.172 [http-nio-auto-1-exec-4] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)]
-2023-05-07 16:43:02.172 [http-nio-auto-1-exec-4] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.172 [http-nio-auto-1-exec-4] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.176 [http-nio-auto-1-exec-5] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.176 [http-nio-auto-1-exec-5] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.177 [http-nio-auto-1-exec-5] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.180 [http-nio-auto-1-exec-5] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)]
-2023-05-07 16:43:02.180 [http-nio-auto-1-exec-5] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.180 [http-nio-auto-1-exec-5] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:43:02.184 [http-nio-auto-1-exec-6] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.185 [http-nio-auto-1-exec-6] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.185 [http-nio-auto-1-exec-6] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.188 [http-nio-auto-1-exec-6] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=3, name=Frenkenstain, author=Marry Shelly, bookYear=1750, isbn=67823)]
-2023-05-07 16:43:02.188 [http-nio-auto-1-exec-6] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=3, name=Frenkenstain, author=Marry Shelly, bookYear=1750, isbn=67823)
-2023-05-07 16:43:02.188 [http-nio-auto-1-exec-6] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=3, name=Frenkenstain, author=Marry Shelly, bookYear=1750, isbn=67823)
-2023-05-07 16:43:02.192 [http-nio-auto-1-exec-7] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.192 [http-nio-auto-1-exec-7] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.192 [http-nio-auto-1-exec-7] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.195 [http-nio-auto-1-exec-7] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=10, name=test for same isbn, author=test, bookYear=1000, isbn=5693789)]
-2023-05-07 16:43:02.196 [http-nio-auto-1-exec-7] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=10, name=test for same isbn, author=test, bookYear=1000, isbn=5693789)
-2023-05-07 16:43:02.196 [http-nio-auto-1-exec-7] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=10, name=test for same isbn, author=test, bookYear=1000, isbn=5693789)
-2023-05-07 16:43:02.199 [http-nio-auto-1-exec-10] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.199 [http-nio-auto-1-exec-10] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.199 [http-nio-auto-1-exec-10] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.203 [http-nio-auto-1-exec-10] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional.empty
-2023-05-07 16:43:02.205 [http-nio-auto-1-exec-10] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing GeneralExceptionHandler.handleBookNotFound(..)
-2023-05-07 16:43:02.205 [http-nio-auto-1-exec-10] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing GeneralExceptionHandler.handleBookNotFound(..) with result <404 NOT_FOUND Not Found,Book could not found by id: -1,[]>
-2023-05-07 16:43:02.220 [http-nio-auto-1-exec-9] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:43:02.221 [http-nio-auto-1-exec-9] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:43:02.221 [http-nio-auto-1-exec-9] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:43:02.224 [http-nio-auto-1-exec-9] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional.empty
-2023-05-07 16:43:02.225 [http-nio-auto-1-exec-9] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing GeneralExceptionHandler.handleBookNotFound(..)
-2023-05-07 16:43:02.225 [http-nio-auto-1-exec-9] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing GeneralExceptionHandler.handleBookNotFound(..) with result <404 NOT_FOUND Not Found,Book could not found by id: -1,[]>
-2023-05-07 16:47:11.757 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
-2023-05-07 16:52:11.762 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
-2023-05-07 16:54:28.677 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getAllBooks()
-2023-05-07 16:54:28.677 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getAllBooks()
-2023-05-07 16:54:28.746 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getAllBooks() with result [BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789), BookDto(id=2, name=, author=test, bookYear=1000, isbn=86554), BookDto(id=3, name=Frenkenstain, author=Marry Shelly, bookYear=1750, isbn=67823), BookDto(id=7, name=test for same isbn, author=test, bookYear=1000, isbn=569789), BookDto(id=10, name=test for same isbn, author=test, bookYear=1000, isbn=5693789)]
-2023-05-07 16:54:28.746 [http-nio-auto-1-exec-1] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getAllBooks() with result [BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789), BookDto(id=2, name=, author=test, bookYear=1000, isbn=86554), BookDto(id=3, name=Frenkenstain, author=Marry Shelly, bookYear=1750, isbn=67823), BookDto(id=7, name=test for same isbn, author=test, bookYear=1000, isbn=569789), BookDto(id=10, name=test for same isbn, author=test, bookYear=1000, isbn=5693789)]
-2023-05-07 16:54:32.949 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookController.getBookById(..)
-2023-05-07 16:54:32.949 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing BookServiceImpl.getBookByID(..)
-2023-05-07 16:54:32.949 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - Before executing CrudRepository.findById(..)
-2023-05-07 16:54:32.954 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing CrudRepository.findById(..) with result Optional[Book(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)]
-2023-05-07 16:54:32.954 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookServiceImpl.getBookByID(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
-2023-05-07 16:54:32.954 [http-nio-auto-1-exec-3] INFO  com.bookstore.bookservice.aspects.LoggingAspect - After executing BookController.getBookById(..) with result BookDto(id=1, name=newbk, author=test, bookYear=1000, isbn=56789)
+2023-07-11 17:37:38.515 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-07-11 17:37:38.595 [main] INFO  com.bookstore.bookservice.BookServiceApplication - Starting BookServiceApplication using Java 19.0.2 with PID 3012 (C:\Users\Rehman\Downloads\Bookstore\book-service\book-service\target\classes started by Rehman in C:\Users\Rehman\Downloads\Bookstore)
+2023-07-11 17:37:38.607 [main] INFO  com.bookstore.bookservice.BookServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-11 17:37:39.682 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:37:39.820 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 2 JPA repository interfaces.
+2023-07-11 17:37:40.060 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=6de73eae-edf9-34f9-a553-c9499c1095e0
+2023-07-11 17:37:40.596 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2023-07-11 17:37:40.603 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-07-11 17:37:40.604 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:37:40.604 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-11 17:37:40.705 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:37:40.707 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2009 ms
+2023-07-11 17:37:40.883 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:37:40.932 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-07-11 17:37:41.184 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:37:42.300 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.bookstore.bookservice.BookServiceApplication.main(BookServiceApplication.java:20) ~[classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	... 47 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:535) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.net.Socket.connect(Socket.java:666) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	... 47 more
+2023-07-11 17:37:42.311 [main] WARN  org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.bookstore.bookservice.BookServiceApplication.main(BookServiceApplication.java:20) ~[classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	... 47 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:535) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.net.Socket.connect(Socket.java:666) ~[?:?]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	... 47 more
+2023-07-11 17:37:42.314 [main] ERROR org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-07-11 17:37:42.315 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-07-11 17:37:42.318 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-07-11 17:37:42.330 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-11 17:37:42.348 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.bookstore.bookservice.BookServiceApplication.main(BookServiceApplication.java:20) ~[classes/:?]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 16 more
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:147) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:60) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 16 more

@@ -1,8 +1,8 @@
-package com.example.jwttoken.serviceImpl;
+package com.bookstore.securityservice.serviceImpl;
 
-import com.example.jwttoken.entities.User;
-import com.example.jwttoken.repos.UserRepository;
-import com.example.jwttoken.security.JwtUserDetails;
+import com.bookstore.securityservice.entities.User;
+import com.bookstore.securityservice.repos.UserRepository;
+import com.bookstore.securityservice.security.JwtUserDetails;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

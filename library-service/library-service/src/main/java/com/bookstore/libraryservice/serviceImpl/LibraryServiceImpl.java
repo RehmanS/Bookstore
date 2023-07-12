@@ -4,6 +4,7 @@ import com.bookstore.libraryservice.client.BookServiceClient;
 import com.bookstore.libraryservice.dto.AddBookRequest;
 import com.bookstore.libraryservice.dto.CreateLibraryRequest;
 import com.bookstore.libraryservice.dto.LibraryDto;
+import com.bookstore.libraryservice.dto.LibraryResponse;
 import com.bookstore.libraryservice.entity.Library;
 import com.bookstore.libraryservice.exception.BookAlreadyExistInLibraryException;
 import com.bookstore.libraryservice.exception.BookNotFoundByIdException;
@@ -24,7 +25,13 @@ import java.util.stream.Collectors;
 public class LibraryServiceImpl implements LibraryService {
     private final LibraryRepository libraryRepository;
     private final BookServiceClient bookServiceClient;
-    Logger logger = LoggerFactory.getLogger(LibraryServiceImpl.class);
+
+
+    @Override
+    public List<LibraryResponse> getAllLibraries() {
+        return libraryRepository.findAll().stream().map(this::convertLibraryToLibraryResponse).collect(Collectors.toList());
+    }
+
     @Override
     public LibraryDto getAllBooksInLibraryById(Long id) {
         Library library = libraryRepository.findById(id).orElseThrow(() -> new LibraryNotFoundException("Library could not found by id: " + id));
@@ -52,18 +59,15 @@ public class LibraryServiceImpl implements LibraryService {
                 .build();
 
         return libraryDto;
-
     }
 
     @Override
     @Transactional
     public void addBookToLibrary(AddBookRequest addBookRequest) {
         Long bookId = bookServiceClient.getBookByIsbn(addBookRequest.getIsbn()).getBody().getId();
-        logger.info("book id: "+bookId);
         Library library = libraryRepository.findById(addBookRequest.getLibraryId()).
                 orElseThrow(() -> new LibraryNotFoundException("Library could not found by id: " + addBookRequest.getLibraryId()));
         if (library.getUserBooks().contains(bookId) & bookId!=-1) {
-            logger.info("list: "+library.getUserBooks());
             throw new BookAlreadyExistInLibraryException("Book already exist in Library. isbn: "+addBookRequest.getIsbn());
         } else {
             library.getUserBooks().add(bookId);
@@ -87,5 +91,12 @@ public class LibraryServiceImpl implements LibraryService {
         } else {
             throw new BookNotFoundByIdException("Book could not found by id: " + bookId);
         }
+    }
+
+    public LibraryResponse convertLibraryToLibraryResponse(Library library){
+        return LibraryResponse.builder()
+                .id(library.getId())
+                .libraryName(library.getLibraryName())
+                .build();
     }
 }

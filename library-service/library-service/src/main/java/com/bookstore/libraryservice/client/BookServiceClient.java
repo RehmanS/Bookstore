@@ -26,7 +26,7 @@ public interface BookServiceClient {
     BookDto getBookById(@PathVariable("book-id") Long id);
 
     default BookDto getBookByIdFallback(Long id, Exception exception) {
-        return new BookDto(0L, "default-book", 0,"default","");
+        return new BookDto(0L, null, "default-book", 0,"default","");
     }
 
 

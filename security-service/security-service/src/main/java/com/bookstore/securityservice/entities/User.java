@@ -1,4 +1,4 @@
-package com.example.jwttoken.entities;
+package com.bookstore.securityservice.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

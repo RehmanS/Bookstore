@@ -11,6 +11,7 @@
         <module name="book-service" />
         <module name="eureka-server" />
         <module name="gateway" />
+        <module name="security-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,6 +19,8 @@
       <module name="eureka-server" target="17" />
       <module name="gateway" target="17" />
       <module name="library-service" target="17" />
+      <module name="security-service" target="17" />
+      <module name="security-service (1)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +29,8 @@
       <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="library-service" options="-parameters" />
+      <module name="security-service" options="-parameters" />
+      <module name="security-service (1)" options="-parameters" />
     </option>
   </component>
 </project>

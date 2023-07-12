@@ -1,8 +1,8 @@
-package com.example.jwttoken.serviceImpl;
+package com.bookstore.securityservice.serviceImpl;
 
-import com.example.jwttoken.entities.RefreshToken;
-import com.example.jwttoken.entities.User;
-import com.example.jwttoken.repos.RefreshTokenRepository;
+import com.bookstore.securityservice.entities.RefreshToken;
+import com.bookstore.securityservice.entities.User;
+import com.bookstore.securityservice.repos.RefreshTokenRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;

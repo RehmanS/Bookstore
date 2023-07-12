@@ -1,13 +1,14 @@
-package com.example.jwttoken.controller;
+package com.bookstore.securityservice.controller;
 
-import com.example.jwttoken.entities.RefreshToken;
-import com.example.jwttoken.entities.User;
-import com.example.jwttoken.requests.RefreshRequest;
-import com.example.jwttoken.requests.UserRequest;
-import com.example.jwttoken.responses.AuthResponse;
-import com.example.jwttoken.security.JwtTokenProvider;
-import com.example.jwttoken.serviceImpl.RefreshTokenServiceImpl;
-import com.example.jwttoken.services.UserService;
+import com.bookstore.securityservice.entities.RefreshToken;
+import com.bookstore.securityservice.entities.User;
+import com.bookstore.securityservice.requests.RefreshRequest;
+import com.bookstore.securityservice.requests.UserRequest;
+import com.bookstore.securityservice.responses.AuthResponse;
+import com.bookstore.securityservice.security.JwtTokenProvider;
+import com.bookstore.securityservice.serviceImpl.RefreshTokenServiceImpl;
+import com.bookstore.securityservice.services.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
+@Slf4j
 public class AuthController {
 
     private AuthenticationManager authenticationManager;
@@ -41,6 +43,9 @@ public class AuthController {
 
     @PostMapping("/login")
     public AuthResponse login(@RequestBody UserRequest loginRequest) {
+        log.info("----------------AUTHENTICATION-------------------");
+        log.info("Request: " + loginRequest);
+
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword());
         Authentication auth = authenticationManager.authenticate(authToken);
 
@@ -53,6 +58,7 @@ public class AuthController {
         authResponse.setRefreshToken(refreshTokenService.createRefreshToken(user));
         authResponse.setUserId(user.getId());
 
+        log.info("Response: " + authResponse);
         return authResponse;
     }
 
